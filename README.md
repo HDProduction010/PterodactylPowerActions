@@ -20,7 +20,7 @@ This bot allows users to manage and monitor Pterodactyl-based game servers direc
 ### Setup
 1. Clone this repository.
 2. Install dependencies using `npm install discord.js axios`.
-3. Configure the bot by editing `settings.json`:
+3. Configure the bot by editing `config.json`:
    - Replace the following placeholders with actual values:
      ```json
      {
@@ -39,7 +39,15 @@ This bot allows users to manage and monitor Pterodactyl-based game servers direc
          }
      }
      ```
-4. Run the bot using `node bot.js`.
+4. Edit additional settings in `src/`:
+   - **`events/poweractions.js`**: Configure role permissions (lines 16-20), log channel (line 63), and power actions.
+   - **`events/AutoRestart.js`**: Configure Lines 7-9 or delete this file should you not want it. (This is a auto restart based on players checking the player count from Battlemetrics)
+   - **`events/sendcommand.js`**: Define the required role (line 12) for sending server commands.
+   - **`schedules/checkpterodactylinstances.js`**: Set server IDs (line 5) or delete this file if auto-restarts are not needed.
+   - **`schedules/updateembeds.js`**: Customize embed messages as needed.
+
+
+5. Run the bot using `node bot.js`.
 
 ## Configuration
 - **Refresh Time**: Defines how often the bot checks for server updates.
