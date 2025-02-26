@@ -21,8 +21,24 @@ This bot allows users to manage and monitor Pterodactyl-based game servers direc
 1. Clone this repository.
 2. Install dependencies using `npm install discord.js axios`.
 3. Configure the bot by editing `config.json`:
-   - Replace `YOUR_BOT_TOKEN_HERE`, `YOUR_GUILD_ID_HERE`, `YOUR_PANEL_URL_HERE/`, and `YOUR_PTERODACTYL_API_KEY_HERE` with your actual values.
-   - Set your server IDs and log channel ID.
+   - Replace the following placeholders with actual values:
+     ```json
+     {
+         "bot_token": "YOUR_BOT_TOKEN_HERE",
+         "guild_id": "YOUR_GUILD_ID_HERE",
+         "refresh_time": YOUR_REFRESH_TIME_HERE,
+         "ptero_baseurl": "YOUR_PANEL_URL_HERE/",
+         "ptero_apikey": "YOUR_PTERODACTYL_API_KEY_HERE",
+         "log-channel": "YOUR_LOG_CHANNEL_ID_HERE",
+         "minthresholdpower": 32400000,
+         "serverid1": "YOUR_SERVER_ID_1_HERE",
+         "serverid2": "YOUR_SERVER_ID_2_HERE",
+         "servers": {
+             "CHANNEL_ID_1-MESSAGE_ID_1": "SERVER_ID_1_HERE",
+             "CHANNEL_ID_2-MESSAGE_ID_2": "SERVER_ID_2_HERE"
+         }
+     }
+     ```
 4. Run the bot using `node bot.js`.
 
 ## Configuration
