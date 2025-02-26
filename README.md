@@ -20,7 +20,7 @@ This bot allows users to manage and monitor Pterodactyl-based game servers direc
 ### Setup
 1. Clone this repository.
 2. Install dependencies using `npm install discord.js axios`.
-3. Configure the bot by editing `config.json`:
+3. Configure the bot by editing `settings.json`:
    - Replace the following placeholders with actual values:
      ```json
      {
